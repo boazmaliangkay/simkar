@@ -3,55 +3,51 @@
 @section('content')
 
     <div class="container-fluid">
-
-        <form>
+        <form metho="post" action="{{route('karyawan-post')}}">
+            {{csrf_field()}}
             <div class="form-group">
               <label for="exampleInputEmail1">Nama</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input value="aris" type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Jabatan</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <input value="web dev" type="text" class="form-control" name="jabatan" id="exampleInputPassword1">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Status</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>Karyawan Tetap</option>
-                  <option>Freelance</option>
+                <select class="form-control"name="status"  id="exampleFormControlSelect1">
+                  <option value="Karyawan Tetap">Karyawan Tetap</option>s
+                  <option value="Freelance">Freelance</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="exampleFormControlSelect1">Status</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>Laki-laki</option>
-                  <option>Perempuan</option>
+                <label for="exampleFormControlSelect1">Jenis Kelamin</label>
+                <select class="form-control" name="jenis-kelamin" id="exampleFormControlSelect1">
+                  <option value="laki-laki">Laki-laki</option>
+                  <option value="perempuan">Perempuan</option>
                 </select>
               </div>
               <div class="form-group">
               <label for="exampleInputEmail1">Nomer telepon</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-             
+              <input value="0899999999" type="text" class="form-control" name="nomor-telepon" id="exampleInputEmail1" aria-describedby="emailHelp">
+
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">umur</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-               
+                <input value="10" type="text" class="form-control"  name="umur" id="exampleInputEmail1" aria-describedby="emailHelp">
+
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Pendidikan</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              
+                <input value="smk" type="text" class="form-control" id="exampleInputEmail1">
+
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Tanggal masuk</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                
+                <input type="date" class="form-control" id="exampleInputEmail1">
               </div>
-            
-
-            
             <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+        </form>
     </div>
 
 @endsection

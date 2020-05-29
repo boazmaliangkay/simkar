@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Jabatan;
+use App\Karyawan;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -11,8 +13,36 @@ class AdminController extends Controller
         return view('pages.admin.karyawan.karyawan');
     }
 
+    public function postKaryawan(Request $request){
+        $dataKaryawan = new Karyawan();
+        $dataKaryawan['name'] = $request->nama;
+        $dataKaryawan['alamat'] = $request->alamat;
+        dd($request->all());
+    }
+
     public function indexJabatan(){
-        return view('pages.admin.karyawan.jabatan');
+        $jabatan = Jabatan::all();
+        return view('pages.admin.karyawan.jabatan', compact('jabatan'));
+    }
+
+    public function postJabatan(Request $request){
+        $jabatan = new Jabatan();
+        $jabatan->nama_jabatan = $request->jabatan;
+        $jabatan->save();
+        return redirect(route('jabatan'));
+    }
+
+    public function editJabatan(Request $request, $id){
+        $jabatan = Jabatan::find($id);
+        $jabatan->nama_jabatan = $request->jabatan;
+        $jabatan->save();
+        return redirect(route('jabatan'));
+    }
+
+    public function deleteJabatan($id){
+        $jabatan = Jabatan::find($id);
+        $jabatan->delete();
+        return redirect(route('jabatan'));
     }
 
     public function indexPendidikan(){
