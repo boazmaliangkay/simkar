@@ -25,20 +25,20 @@
     </li>
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-      <a class="nav-link collapsed" href="#" aria-expanded="true" aria-controls="collapseUtilities">
+      <a class="nav-link collapsed" href="{{route('jabatan')}}" aria-expanded="true" aria-controls="collapseUtilities">
         <i class="fas fa-fw fa-wrench"></i>
         <span>Jabatan</span>
       </a>
     </li>
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="{{route('pendidikan')}}" aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Pendidikan</span>
         </a>
     </li>    <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="{{route('status')}}" aria-expanded="true" aria-controls="collapseUtilities">
             <span>Status</span>
         </a>
     </li>
