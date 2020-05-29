@@ -9,15 +9,34 @@
               <label for="exampleInputEmail1">Nama</label>
               <input value="aris" type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
+{{--            <div class="form-group">--}}
+{{--                <label for="jabatan">Jabatan</label>--}}
+{{--                <select class="form-control" name="jabatan" id="jabatan">--}}
+{{--                    @if(isset($jabatan->nama_jabatan))--}}
+{{--                        @foreach($jabatan as $jabat)--}}
+{{--                            <option value="{{$jabatan->nama_jabatan}}">{{$jabatan->nama_jabatan}}</option>--}}
+{{--                        @endforeach--}}
+{{--                    @else--}}
+{{--                        <option value="Kosong">Kosong</option>--}}
+{{--                    @endif--}}
+{{--                </select>--}}
+{{--            </div>--}}
             <div class="form-group">
-              <label for="exampleInputPassword1">Jabatan</label>
-              <input value="web dev" type="text" class="form-control" name="jabatan" id="exampleInputPassword1">
+                <label for="jabatan">Jabatan</label>
+                <select class="form-control" name="jabatan" id="jabatan">
+                    <option value="{{null}}"> - </option>
+                    @foreach($jabatan as $jabat)
+                        <option value="{{$jabat->nama_jabatan}}">{{$jabat->nama_jabatan}}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Status</label>
                 <select class="form-control"name="status"  id="exampleFormControlSelect1">
-                  <option value="Karyawan Tetap">Karyawan Tetap</option>s
-                  <option value="Freelance">Freelance</option>
+                    <option value="{{null}}"> - </option>
+                    @foreach($status as $sts)
+                        <option value="{{$sts->nama_status}}">{{$jabat->nama_status}}</option>
+                    @endforeach
                 </select>
               </div>
               <div class="form-group">

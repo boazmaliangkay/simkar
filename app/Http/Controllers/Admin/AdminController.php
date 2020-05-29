@@ -5,12 +5,21 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Jabatan;
 use App\Karyawan;
+use App\Status;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
     public function indexKaryawan(){
-        return view('pages.admin.karyawan.karyawan');
+//        mengambil semua data dari table jabatan
+        $jabatan = Jabatan::all();
+        $status = Status::all();
+        return view('pages.admin.karyawan.karyawan', compact(
+            [
+                'jabatan',
+                'status'
+            ]
+        ));
     }
 
     public function postKaryawan(Request $request){

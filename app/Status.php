@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Status extends Model
 {
     use SoftDeletes;
+    protected $table = "status";
     protected $fillable = ['nama_status'];
 
     public function karyawan(){
