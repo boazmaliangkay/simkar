@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 //Route::resource('/karyawan', 'Admin\KaryawanController');
 Route::get('/karyawan', 'Admin\AdminController@indexKaryawan')->name('karyawan');
-Route::get('/jabatan', 'Admin\AdminController@indexJabatan');
-Route::get('/pendidikan', 'Admin\AdminController@indexPendidikan');
-Route::get('/status', 'Admin\AdminController@indexStatus');
+Route::get('/jabatan', 'Admin\AdminController@indexJabatan')->name('jabatan');
+Route::get('/pendidikan', 'Admin\AdminController@indexPendidikan')->name('pendidikan');
+Route::get('/status', 'Admin\AdminController@indexStatus')->name('status');
 
