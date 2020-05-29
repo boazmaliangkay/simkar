@@ -21,7 +21,7 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="exampleFormControlSelect1">Status</label>
+                <label for="exampleFormControlSelect1">Jenis kelamin</label>
                 <select class="form-control" id="exampleFormControlSelect1">
                   <option>Laki-laki</option>
                   <option>Perempuan</option>
