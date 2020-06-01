@@ -22,8 +22,4 @@ class Karyawan extends Model
     public function posisi(){
         return $this->belongsTo(Jabatan::class, "posisi_id", "id");
     }
-
-
-
-
 }

@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Status extends Model
 {
     use SoftDeletes;
-    protected $table = "status";
+    protected $table    = "status";
     protected $fillable = ['nama_status'];
 
     public function karyawan(){
-        return $this->hasMany(Karyawan::class,"statud_id", "id");
+        return $this->hasMany(Karyawan::class,"posisi_id", "id");
     }
 }
